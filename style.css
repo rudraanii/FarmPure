@@ -198,3 +198,65 @@ body {
     width: 50%;
 }
 
+footer {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Spread content horizontally */
+    padding: 10px 30px; /* Same padding as the header */
+    background: #ffffff; /* Same background color as the header */
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.06); /* Subtle shadow at the top */
+    z-index: 999; /* Ensure it layers properly */
+    position: relative; /* Default position */
+    bottom: 0; /* Keeps the footer at the bottom */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px; /* Adjust the font size */
+    color: #1a1a1a; /* Match the color of the header links */
+}
+
+.social-icons {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icons a {
+    color: #1a1a1a; /* Match the header icon color */
+    font-size: 20px; /* Adjust icon size */
+    margin-left: 20px; /* Spacing between icons */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Box width for icons */
+    height: 40px; /* Box height for icons */
+    background-color: #f9f9f9; /* Light box background */
+    border: 1px solid #ddd; /* Border for the box */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth hover transition */
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #107d09; /* Green icon on hover */
+    background-color: #e6f4e6; /* Light green background on hover */
+    border-color: #107d09; /* Green border on hover */
+}
+
+.social-icons a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #107d09;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+.social-icons a:hover::after {
+    width: 100%;
+}
