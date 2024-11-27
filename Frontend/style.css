@@ -146,6 +146,21 @@ body {
     border-color: #107d09; /* Green border on hover */
 }
 
+.nav-icons a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #107d09;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+.nav-icons a:hover::after {
+    width: 100%;
+}
+
 /* Home Page*/
 #hero-container {
     display: flex;
