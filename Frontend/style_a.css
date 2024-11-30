@@ -166,7 +166,7 @@ body {
     display: flex;
     width: 100%;
     height: 100vh;
-    background-image: url('./image/picc3.jpg');
+    background-image: url('./image/picc2.jpg');
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -183,7 +183,7 @@ footer {
     align-items: center; /* Vertically center content */
     justify-content: space-between; /* Spread content horizontally */
     padding: 10px 30px; /* Same padding as the header */
-    background: #ffffff; /* Same background color as the header */
+    background: #ffe7a6; /* Same background color as the header */
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.06); /* Subtle shadow at the top */
     z-index: 999; /* Ensure it layers properly */
     position: relative; /* Default position */
@@ -213,7 +213,7 @@ footer p {
     align-items: center;
     width: 40px; /* Box width for icons */
     height: 40px; /* Box height for icons */
-    background-color: #f9f9f9; /* Light box background */
+    background-color: #fad274; /* Light box background */
     border: 1px solid #ddd; /* Border for the box */
     border-radius: 5px; /* Rounded corners */
     transition: all 0.3s ease; /* Smooth hover transition */
@@ -221,16 +221,16 @@ footer p {
 }
 
 .social-icons a:hover {
-    color: #107d09; /* Green icon on hover */
+    color: #ae7711; /* Green icon on hover */
     background-color: #e6f4e6; /* Light green background on hover */
-    border-color: #107d09; /* Green border on hover */
+    border-color: #ae7711; /* Green border on hover */
 }
 
 .social-icons a::after {
     content: "";
     width: 0;
     height: 2px;
-    background: #107d09;
+    background: #ae7711;
     position: absolute;
     left: 0;
     bottom: -4px;
