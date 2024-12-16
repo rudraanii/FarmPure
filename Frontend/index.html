@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FarmPure</title>
     <style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* Includes padding and border in element width/height */
+    }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -18,10 +25,12 @@
             color: white; /* Makes text readable against a dark background */
             font-size: 18px;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             text-align: center; /* Center-align all text on the page */
             flex-direction: column;
+            height: 100vh; /* Ensure the body takes the full height */
+            overflow: hidden;
         }
 
         /* Header Section */
@@ -33,6 +42,9 @@
             background-color: #6a4a3c;
             color: white;
             width: 100%;
+            position: fixed; /* Keeps header fixed */
+            top: 0;
+            z-index: 10; /* Ensures the header stays on top */
         }
 
         .header h1 {
@@ -65,6 +77,8 @@
             text-align: center;
             padding: 60px 20px;
             width: 100%;
+            max-width: 100%; /* Prevent overflow */
+            margin-top: 80px; /* Space for fixed header */
         }
 
         .dynamic-text {
