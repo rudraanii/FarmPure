@@ -170,31 +170,58 @@ body {
 /* Home Page*/
 #hero-container {
     display: flex;
+    flex-direction: column;  /* Keep text and image stacked vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     width: 100%;
-    height: 100vh;
-    flex: 1 1 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    overflow: visible;  /* Allow scrolling if content exceeds viewport */
 }
+
+
 
 /* Left Section with Text and Background */
 #hero-left {
     background-image: url('./image/pic4.png');
-    width: 50%;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    color: #222;
+    max-width: 800px;  /* Adjust to your desired content width */
+    flex: 1;
+    margin: 20px 0;  /* Adds spacing for responsiveness */
 }
 
-#hero-left h1 {
-    font-size: 50px;
-    color: orange;
+#hero-left h2, #hero-left h4, #hero-left p {
+    margin: 10px 0; /* Adds spacing between sections */
+    line-height: 1.5;
+}
+
+#hero-left h2, #hero-left h4 {
+    margin: 10px 0;
 }
 
 #hero-left h2 {
     font-size: 46px;
-    color: #222;
+    color: #107d09; /* Green heading for better contrast */
+}
+
+#hero-left p {
+    font-size: 18px;
+    color: #465b52;
+    line-height: 1.5;
+    margin: 15px 0;
+    max-width: 100%;  /* Ensures text wraps properly */
+    word-wrap: break-word;  /* Prevents long words from breaking the layout */
 }
 
 /* Right Section with Background Image */
@@ -203,6 +230,8 @@ body {
     background-size: cover;
     background-position: center;
     width: 50%;
+    flex: 3;
+    min-height: 300px;
 }
 
 #hero-left,
@@ -272,4 +301,19 @@ footer p {
 
 .social-icons a:hover::after {
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    #hero-container {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+
+    #hero-left {
+        max-width: 100%;  /* Take full width */
+        margin: 10px 0;  /* Add space between elements */
+    }
+    
+    #hero-right {
+        min-height: 250px;  /* Adjust image height for mobile */
+    }
 }
