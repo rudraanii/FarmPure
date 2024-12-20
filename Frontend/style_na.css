@@ -9,9 +9,9 @@ body {
     background-color: #f9f9f9;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Changed from center to flex-start */
-    min-height: 100vh; /* Ensures content fits within the viewport */
-    padding: 20px; /* Provides spacing around the content */
+    align-items: flex-start; 
+    min-height: 100vh; 
+    padding: 20px; 
 }
 
 .form-container {
