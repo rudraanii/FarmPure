@@ -170,18 +170,13 @@ body {
 /* Home Page*/
 #hero-container {
     display: flex;
-    flex-direction: column;  /* Keep text and image stacked vertically */
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
     padding: 20px;
     background-color: #f9f9f9;
-    box-sizing: border-box;
-    overflow: visible;  /* Allow scrolling if content exceeds viewport */
 }
-
-
 
 /* Left Section with Text and Background */
 #hero-left {
@@ -198,7 +193,7 @@ body {
     color: #222;
     max-width: 800px;  /* Adjust to your desired content width */
     flex: 1;
-    margin: 20px 0;  /* Adds spacing for responsiveness */
+    margin: 20px;  /* Adds spacing for responsiveness */
 }
 
 #hero-left h2, #hero-left h4, #hero-left p {
@@ -222,21 +217,6 @@ body {
     margin: 15px 0;
     max-width: 100%;  /* Ensures text wraps properly */
     word-wrap: break-word;  /* Prevents long words from breaking the layout */
-}
-
-/* Right Section with Background Image */
-#hero-right {
-    background-image: url('./image/pic1.png'); 
-    background-size: cover;
-    background-position: center;
-    width: 50%;
-    flex: 3;
-    min-height: 300px;
-}
-
-#hero-left,
-#hero-right {
-    flex: 1; /* Each section takes half the width */
 }
 
 footer {
