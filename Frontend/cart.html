@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d9f55f49c0.js" crossorigin="anonymous"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.234), rgba(193, 200, 239, 0.289)), url("./image/picc4.jpg");
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
         }
-        h1 {
-            color: #107d09;
+        h2 {
+            color: #096a02;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 40px;
+            line-height: 64px;
         }
         .cart-container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             background: #fff;
             padding: 20px;
             border-radius: 10px;
@@ -35,11 +47,25 @@
             background-color: #107d09;
             color: #fff;
         }
-        .total {
+        .total, .proceed-container {
             text-align: right;
-            font-size: 20px;
             margin-top: 20px;
             color: #107d09;
+        }
+        .total {
+            font-size: 20px;
+        }
+        .proceed-container button {
+            padding: 10px 20px;
+            background: #107d09;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .proceed-container button:hover {
+            background: #0b5e07;
         }
         .empty-cart {
             text-align: center;
@@ -58,10 +84,35 @@
         button:hover {
             background: #0b5e07;
         }
+        footer {
+            margin-top: auto; 
+        }
     </style>
 </head>
 <body>
-    <h1>Shopping Cart</h1>
+    <!-- Header Section -->
+    <section id="header">
+        <a href="#"><img src="./image/logo1.png" class="logo" alt="Logo"></a>
+        <div id="navbar">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="review.html">Review</a></li>
+            </ul>
+            <ul class="nav-icons">
+                <li><a href="map.html"><i class="fa-solid fa-location-dot"></i></a></li>
+                <li><a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="profile.html"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <h2>Shopping Cart</h2>
     <div class="cart-container">
         <table id="cart-items">
             <thead>
@@ -79,7 +130,21 @@
         </table>
         <p id="total-price" class="total">Total: ₹0</p>
         <p id="empty-cart-message" class="empty-cart">Your cart is currently empty.</p>
+
+        <div class="proceed-container">
+            <button id="proceed-button" onclick="proceedToBuy()">Proceed to Buy</button>
+        </div>
     </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; FarmPure. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
 
     <script>
         const cart = [
@@ -99,11 +164,13 @@
             if (cart.length === 0) {
                 emptyCartMessage.style.display = "block";
                 totalPriceElement.style.display = "none";
+                document.getElementById("proceed-button").style.display = "none";
                 return;
             }
 
             emptyCartMessage.style.display = "none";
             totalPriceElement.style.display = "block";
+            document.getElementById("proceed-button").style.display = "inline-block";
 
             cart.forEach((item, index) => {
                 const subtotal = item.quantity * item.price;
@@ -126,6 +193,15 @@
         function removeItem(index) {
             cart.splice(index, 1);
             loadCart();
+        }
+
+        function proceedToBuy() {
+            if (cart.length === 0) {
+                alert("Your cart is empty!");
+                return;
+            }
+            // Add the functionality here for proceeding to the checkout page
+            alert("Proceeding to checkout...");
         }
 
         loadCart();

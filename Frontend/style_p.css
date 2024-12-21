@@ -42,15 +42,15 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
     margin: 0;
     padding: 0;
 }
 
 .logo {
-    width: 120px; /* Adjust this value to your preference */
-    height: auto; /* Maintains the aspect ratio */
-    margin-right: 20px; /* Add some spacing between the logo and the navbar */
+    width: 120px; 
+    height: auto; 
+    margin-right: 20px; 
 }
 
 
@@ -137,8 +137,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px; /* Adjust the width of the box */
-    height: 40px; /* Adjust the height of the box */
+    width: 40px; /* width of the box */
+    height: 40px; /* height of the box */
     background-color: #f9f9f9; /* Background color for the box */
     border: 1px solid #ddd; /* Border for the box */
     border-radius: 5px; /* Rounded corners */
@@ -178,7 +178,6 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Left Section with Text and Background */
 #hero-left {
     background-image: url('./image/pic4.png');
     background-size: cover;
@@ -191,13 +190,13 @@ body {
     box-sizing: border-box;
     width: 100%;
     color: #222;
-    max-width: 800px;  /* Adjust to your desired content width */
+    max-width: 800px;  
     flex: 1;
-    margin: 20px;  /* Adds spacing for responsiveness */
+    margin: 20px;  
 }
 
 #hero-left h2, #hero-left h4, #hero-left p {
-    margin: 10px 0; /* Adds spacing between sections */
+    margin: 10px 0; 
     line-height: 1.5;
 }
 
@@ -207,7 +206,7 @@ body {
 
 #hero-left h2 {
     font-size: 46px;
-    color: #107d09; /* Green heading for better contrast */
+    color: #107d09; 
 }
 
 #hero-left p {
