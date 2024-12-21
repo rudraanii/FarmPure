@@ -48,7 +48,7 @@ body {
 }
 
 .logo {
-    width: 120px; 
+    width: 120px;
     height: auto; 
     margin-right: 20px; 
 }
@@ -167,7 +167,6 @@ body {
     width: 100%;
 }
 
-/* Home Page*/
 #hero-container {
     display: flex;
     justify-content: center;
@@ -178,45 +177,6 @@ body {
     background-color: #f9f9f9;
 }
 
-#hero-left {
-    background-image: url('./image/pic4.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 100%;
-    color: #222;
-    max-width: 800px;  
-    flex: 1;
-    margin: 20px;  
-}
-
-#hero-left h2, #hero-left h4, #hero-left p {
-    margin: 10px 0; 
-    line-height: 1.5;
-}
-
-#hero-left h2, #hero-left h4 {
-    margin: 10px 0;
-}
-
-#hero-left h2 {
-    font-size: 46px;
-    color: #107d09; 
-}
-
-#hero-left p {
-    font-size: 18px;
-    color: #465b52;
-    line-height: 1.5;
-    margin: 15px 0;
-    max-width: 100%;  /* Ensures text wraps properly */
-    word-wrap: break-word;  /* Prevents long words from breaking the layout */
-}
 
 footer {
     display: flex; /* Flexbox for layout */
