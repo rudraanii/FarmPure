@@ -38,13 +38,15 @@ p {
     padding: 40px 80px;
 }
 
-body {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    height: 100vh; 
+body, h1, h2, h3, h4, p, ul, li, a {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 .logo {
