@@ -70,9 +70,14 @@
         }
 
         .proceed-container {
-            display: flex; /* Use flexbox for button alignment */
-            justify-content: center; /* Center the button */
-            width: 100%; /* Ensure it takes full width */
+            display: flex; 
+            justify-content: center; 
+            width: 100%; 
+        }
+
+        .proceed-container a {
+            text-decoration: none; 
+            color: inherit; 
         }
 
         .proceed-container button {
@@ -126,14 +131,16 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Items will be dynamically added here -->
+                <!-- Add items dynamically here -->
             </tbody>
         </table>
         <p id="total-price" class="total">Total: ₹0</p>
         <p id="empty-cart-message" class="empty-cart">Your cart is currently empty.</p>
 
         <div class="proceed-container">
-            <button id="proceed-button" onclick="proceedToBuy()"><a href="payment.html">Proceed to Buy</button>
+            <a href="payment.html" style="text-decoration: none; color: inherit;">
+                <button id="proceed-button" onclick="proceedToBuy()">Proceed to Buy</button>
+            </a>
         </div>
     </div>
 
